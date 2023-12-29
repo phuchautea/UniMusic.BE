@@ -8,6 +8,6 @@ const songSchema = new mongoose.Schema({
   file: String,
 });
 
-const songModel = mongoose.model("Songs", songSchema);
+const songModel = mongoose.model("Song", songSchema);
 
 module.exports = songModel;

@@ -5,6 +5,6 @@ const favoriteSchema = new mongoose.Schema({
   songs: [{ type: mongoose.Schema.Types.ObjectId, ref: "Song" }],
 });
 
-const favoriteModel = mongoose.model("Favorites", favoriteSchema);
+const favoriteModel = mongoose.model("Favorite", favoriteSchema);
 
 module.exports = favoriteModel;
