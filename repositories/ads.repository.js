@@ -10,16 +10,9 @@ class adsRepository {
 		const perPageNum = parseInt(perPage, 10);
 		const skip = (pageNum - 1) * perPageNum;
 
-		// Fetch the paginated results
 		const ads = await adsModel.find({}).skip(skip).limit(perPageNum);
-
-		// Fetch the total count of ads
 		const totalCount = await adsModel.countDocuments();
-
-		// Calculate the total number of pages
 		const totalPages = Math.ceil(totalCount / perPageNum);
-
-		// Check if the current page is the last page
 		const isLastPage = pageNum >= totalPages;
 
 		return {
