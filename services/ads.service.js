@@ -2,7 +2,7 @@ const adsRepository = require("../repositories/ads.repository");
 
 class adsService {
 	async getAll() {
-		return adsRepository.getAll();
+		return adsRepository.getAdsList(1, 10);
 	}
 
 	async getById(adId) {
