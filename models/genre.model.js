@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const genreSchema = new mongoose.Schema({
   name: String,
+  slug: String,
   description: String,
 });
 
