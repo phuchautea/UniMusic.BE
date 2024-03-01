@@ -2,10 +2,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const routes = require("./routes");
 const mongoConfig = require("./config/mongodb.config");
 
 const app = express();
+app.use(cors());
 const PORT = 3000;
 
 mongoose
